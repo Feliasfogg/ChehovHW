@@ -1,0 +1,46 @@
+﻿<Window
+   x:Class="UserControl.MainWindow"
+   Title="MainWindow"
+   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+   xmlns:local="clr-namespace:UserControl"
+   xmlns:wpfControlLibrary="clr-namespace:WpfControlLibrary;assembly=WpfControlLibrary"
+   Height="188.667"
+   Width="249.667"
+   mc:Ignorable="d">
+   <StackPanel
+      Name="StackPanel"
+      HorizontalAlignment="Center"
+      VerticalAlignment="Center">
+      <wpfControlLibrary:NumericUpDown
+         Name="NumericUpDown"
+         Width="100"
+         HorizontalAlignment="Left"
+         VerticalAlignment="Top"
+         DecimalPlaces="3"
+         Maximum="100"
+         Minimum="-100"
+         Value="50" />
+      <TextBox
+         x:Name="textBox"
+         Height="29"
+         Width="100"
+         HorizontalAlignment="Left"
+         VerticalAlignment="Top"
+         Text="{Binding
+            ElementName=NumericUpDown,
+            Path=Value,
+            Mode=OneWay}"
+         TextWrapping="Wrap" />
+      <Button
+         x:Name="button"
+         Width="100"
+         HorizontalAlignment="Left"
+         VerticalAlignment="Top"
+         Click="button_Click"
+         Content="Show Value" />
+
+   </StackPanel>
+</Window>
