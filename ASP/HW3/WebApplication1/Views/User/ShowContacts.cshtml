@@ -1,0 +1,20 @@
+﻿@{
+   ViewBag.Title = "ShowContacts";
+}
+
+@using System.Web.UI.WebControls
+@model User
+
+<h2>ShowContacts</h2>
+<p>@Model.Name telephonebook</p>
+<form action="" method="post">
+   <input name="Name"/>
+   <input name="Telephone"/>
+   <input type="submit"/>
+</form>
+<p></p>
+<ul>
+   @foreach(Contact contact in Model.Contacts) {
+   <li> Name:@contact.Name Telephone:@contact.Telephone @Html.ActionLink("RemoveContact","RemoveContact", new {contact.UserId, contact.Telephone})</li>
+   }
+</ul>
