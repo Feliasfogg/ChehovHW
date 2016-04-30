@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EventSample
-{
+namespace EventSample {
    class Program {
       /// <summary>
       /// Итак у нас есть событие событие содержит ключевое слово event ТипДелегатаОбрабатывающегоСобытие НазваниеСобытия
@@ -18,34 +17,42 @@ namespace EventSample
       /// не известен
       /// </summary>
       /// <param name="args"></param>
-
       static void Main(string[] args) {
          var objMyClass = new MyClass();
 
-         for(int i=0; i<10000; ++i) objMyClass.CallEvent();
+         for(int i = 0; i < 1; ++i) {
+            objMyClass.CallEvent();
+         }
       }
-     
-      public class MyClass
-      {
-         private event MyDelegate MyEvent;
-         private delegate void MyDelegate(object sender, EventArgs e);
 
-         public MyClass()
-         {
-            MyDelegate objDelegate1=new MyDelegate(MyMethod1);
-            MyDelegate objDelegate2=new MyDelegate(MyMethod2);
+      public class MyClass {
+         private delegate void MyDelegate(object sender, EventArgs e);
+         private event MyDelegate MyEvent;
+         private MyDelegate objDelegate1;
+         private MyDelegate objDelegate2;
+
+         public MyClass() {
+            objDelegate1 = new MyDelegate(MyMethod1);
+            objDelegate2 = new MyDelegate(MyMethod2);
+
+            //multicast delegate
+            objDelegate1 += new MyDelegate(MyMethod1);
+            objDelegate1 += new MyDelegate(MyMethod2);
 
             MyEvent += objDelegate1;
             MyEvent += objDelegate2;
          }
+
          public void CallEvent() {
-            MyEvent(null, null);
+            objDelegate1(null, null);
+            //MyEvent(null, null);
          }
+
          private void MyMethod1(object sender, EventArgs eventArgs) {
             Console.WriteLine("Invoke Method1");
          }
-         private void MyMethod2(object sender, EventArgs eventArgs)
-         {
+
+         private void MyMethod2(object sender, EventArgs eventArgs) {
             Console.WriteLine("Invoke Method2");
          }
       }

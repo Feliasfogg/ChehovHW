@@ -1,0 +1,19 @@
+﻿<!--2. Имеется класс Cars и класс CarsFactory. Класс  CarsFactory содержит 
+статсический метод, возвращающий коллекцию объетов класса Cars. 
+С ипользованием разметки XAML привязать данную коллекцию к ListBox-->
+<Window x:Class="CarFactoryApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarFactoryApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.Resources>
+            <local:CarFactory x:Key="Factory"></local:CarFactory>
+            <local:CarsFactoryConverter x:Key="CarsFactoryConverter"></local:CarsFactoryConverter>
+        </Grid.Resources>
+        <ListBox ItemsSource="{Binding Source={StaticResource Factory}, Converter={StaticResource CarsFactoryConverter}}"></ListBox>
+    </Grid>
+</Window>

@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MailBaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="MailBaseModelStoreContainer">
+    <EntitySet Name="Receivers" EntityType="MailBaseModel.Store.Receivers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Groups" EntityType="MailBaseModel.Store.Groups" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Emails" EntityType="MailBaseModel.Store.Emails" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="GroupReceiver" Association="MailBaseModel.Store.GroupReceiver">
+      <End Role="Group" EntitySet="Groups" />
+      <End Role="Receiver" EntitySet="Receivers" />
+    </AssociationSet>
+    <AssociationSet Name="ReceiverEmail" Association="MailBaseModel.Store.ReceiverEmail">
+      <End Role="Receiver" EntitySet="Receivers" />
+      <End Role="Email" EntitySet="Emails" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Receivers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Group_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Groups">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LeftKey" Type="int" Nullable="false" />
+    <Property Name="RightKey" Type="int" Nullable="false" />
+    <Property Name="Level" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Emails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Header" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Text" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SendingTime" Type="int" Nullable="false" />
+    <Property Name="Sended" Type="bit" Nullable="false" />
+    <Property Name="Receiver_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="GroupReceiver">
+    <End Role="Group" Type="MailBaseModel.Store.Groups" Multiplicity="1" />
+    <End Role="Receiver" Type="MailBaseModel.Store.Receivers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Group">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Receiver">
+        <PropertyRef Name="Group_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ReceiverEmail">
+    <End Role="Receiver" Type="MailBaseModel.Store.Receivers" Multiplicity="1" />
+    <End Role="Email" Type="MailBaseModel.Store.Emails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Receiver">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Email">
+        <PropertyRef Name="Receiver_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="MailBaseModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="MailBaseModelContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Receivers" EntityType="MailBaseModel.Receiver" />
+          <EntitySet Name="Groups" EntityType="MailBaseModel.Group" />
+          <AssociationSet Name="GroupReceiver" Association="MailBaseModel.GroupReceiver">
+            <End Role="Group" EntitySet="Groups" />
+            <End Role="Receiver" EntitySet="Receivers" />
+          </AssociationSet>
+          <EntitySet Name="Emails" EntityType="MailBaseModel.Email" />
+          <AssociationSet Name="ReceiverEmail" Association="MailBaseModel.ReceiverEmail">
+            <End Role="Receiver" EntitySet="Receivers" />
+            <End Role="Email" EntitySet="Emails" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Receiver">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Email" Type="String" Nullable="false" />
+          <NavigationProperty Name="Group" Relationship="MailBaseModel.GroupReceiver" FromRole="Receiver" ToRole="Group" />
+          <NavigationProperty Name="Emails" Relationship="MailBaseModel.ReceiverEmail" FromRole="Receiver" ToRole="Email" />
+        </EntityType>
+        <EntityType Name="Group">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="LeftKey" Type="Int32" Nullable="false" />
+          <Property Name="RightKey" Type="Int32" Nullable="false" />
+          <Property Name="Level" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Receivers" Relationship="MailBaseModel.GroupReceiver" FromRole="Group" ToRole="Receiver" />
+        </EntityType>
+        <Association Name="GroupReceiver">
+          <End Type="MailBaseModel.Group" Role="Group" Multiplicity="1" />
+          <End Type="MailBaseModel.Receiver" Role="Receiver" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Email">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Receiver" Relationship="MailBaseModel.ReceiverEmail" FromRole="Email" ToRole="Receiver" />
+          <Property Name="Header" Type="String" Nullable="false" />
+          <Property Name="Text" Type="String" Nullable="false" />
+          <Property Name="SendingTime" Type="Int32" Nullable="false" />
+          <Property Name="Sended" Type="Boolean" Nullable="false" />
+          </EntityType>
+        <Association Name="ReceiverEmail">
+          <End Type="MailBaseModel.Receiver" Role="Receiver" Multiplicity="1" />
+          <End Type="MailBaseModel.Email" Role="Email" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MailBaseModelStoreContainer" CdmEntityContainer="MailBaseModelContainer">
+    <EntitySetMapping Name="Receivers">
+      <EntityTypeMapping TypeName="IsTypeOf(MailBaseModel.Receiver)">
+        <MappingFragment StoreEntitySet="Receivers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Groups">
+      <EntityTypeMapping TypeName="IsTypeOf(MailBaseModel.Group)">
+        <MappingFragment StoreEntitySet="Groups">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LeftKey" ColumnName="LeftKey" />
+          <ScalarProperty Name="RightKey" ColumnName="RightKey" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Emails">
+      <EntityTypeMapping TypeName="IsTypeOf(MailBaseModel.Email)">
+        <MappingFragment StoreEntitySet="Emails">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Header" ColumnName="Header" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="SendingTime" ColumnName="SendingTime" />
+          <ScalarProperty Name="Sended" ColumnName="Sended" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="GroupReceiver" TypeName="MailBaseModel.GroupReceiver" StoreEntitySet="Receivers">
+      <EndProperty Name="Group">
+        <ScalarProperty Name="Id" ColumnName="Group_Id" />
+      </EndProperty>
+      <EndProperty Name="Receiver">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ReceiverEmail" TypeName="MailBaseModel.ReceiverEmail" StoreEntitySet="Emails">
+      <EndProperty Name="Receiver">
+        <ScalarProperty Name="Id" ColumnName="Receiver_Id" />
+      </EndProperty>
+      <EndProperty Name="Email">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

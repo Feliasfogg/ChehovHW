@@ -16,6 +16,10 @@ namespace MediaFileLib {
       public List<MediaFile> MediaFiles { get; private set; }
       public string Name { get; set; }
 
+      /// <summary>
+      /// save current file
+      /// </summary>
+      /// <param name="strFileName"></param>
       public void Save(string strFileName) {
          using(FileStream fs = new FileStream(strFileName, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.ReadWrite)) {
             BinaryFormatter objFormatter = new BinaryFormatter();
@@ -23,6 +27,10 @@ namespace MediaFileLib {
          }
       }
 
+      /// <summary>
+      /// Open current file
+      /// </summary>
+      /// <param name="strFileName"></param>
       public void Open(string strFileName) {
          using(FileStream fs = new FileStream(strFileName, FileMode.Open, FileAccess.Read, FileShare.Read)) {
             BinaryFormatter objFormatter = new BinaryFormatter();

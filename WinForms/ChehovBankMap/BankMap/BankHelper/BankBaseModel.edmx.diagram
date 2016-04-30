@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bd3493c622864dea9145c5b0962d2057" Name="Diagram1" >
+        <EntityTypeShape EntityType="BankBaseModel.CurrencyExchanger" Width="1.5" PointX="3" PointY="1.625" />
+        <EntityTypeShape EntityType="BankBaseModel.Bank" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="BankBaseModel.ExchangeRate" Width="1.5" PointX="5.25" PointY="5.875" />
+        <EntityTypeShape EntityType="BankBaseModel.Service" Width="1.5" PointX="5.25" PointY="1.125" />
+        <EntityTypeShape EntityType="BankBaseModel.Operator" Width="1.5" PointX="5.25" PointY="3.5" />
+        <AssociationConnector Association="BankBaseModel.BankExchanger" />
+        <AssociationConnector Association="BankBaseModel.BankBranchService" />
+        <AssociationConnector Association="BankBaseModel.BankBranchOperator" />
+        <AssociationConnector Association="BankBaseModel.BankExchangeRate" />
+        <EntityTypeShape EntityType="BankBaseModel.Entity1" Width="1.5" PointX="2.75" PointY="7.125" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

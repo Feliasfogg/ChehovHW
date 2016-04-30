@@ -1,0 +1,28 @@
+﻿<Window
+   x:Class="Exam4.MainWindow"
+   Title="MainWindow"
+   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+   xmlns:local="clr-namespace:Exam4"
+   Height="108.784"
+   Width="525"
+   mc:Ignorable="d">
+   <Window.Resources>
+      <local:CurrencyConverter x:Key="CurrencyConverter" />
+      <local:Currency x:Key="Usd" />
+      <local:Currency x:Key="Blr" />
+   </Window.Resources>
+
+   <StackPanel>
+      <DockPanel>
+         <Label Content="USD" />
+         <TextBox Name="TextBoxUsd" Text="{Binding Source={StaticResource Usd}, Path=Value}"/>
+      </DockPanel>
+      <DockPanel>
+         <Label Content="BLR" />
+         <TextBox Name="TextBoxBlr"></TextBox>
+      </DockPanel>
+   </StackPanel>
+</Window>

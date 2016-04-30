@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<PlaceSearchResponse>
+  <status>OK</status>
+  <result>
+    <name>Абсолютбанк</name>  <type>bank</type>  <type>finance</type>  <type>point_of_interest</type>
+    <type>establishment</type>  <formatted_address>Praspyekt Nyezalyezhnastsi, Minsk, Belarus</formatted_address>
+    <geometry>
+      <location>
+        <lat>53.9260010</lat>    <lng>27.6174720</lng>
+      </location>
+    </geometry>
+    <icon>https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png</icon>
+    <reference>CnRpAAAAPzrN3lK-xU_I_5m_LEYiTMCdCuykxUK_QeU8EUvMAQHPBiLk1ASnJAabx8FkHOQEFlgEuu4fFDPd2J0_0kIqYj_3SMQS88RnBExLUa8pVuICJkOQMxo0CZrNkUP62aunIWv8STrry9Pmxs80RccVuRIQ1bClPrSJqdQBSD-CxM8kWhoUmTU5qaAF87tjRngWkGkw984zgSI</reference>
+    <id>bda932b04702b59ce17ab890f5a4389aaed4d30a</id>  <place_id>ChIJYWaARgPP20YRQYaEqNihpR4</place_id>
+  </result>
+  <result>
+    <name>Паритетбанк</name>  <type>bank</type>  <type>finance</type>  <type>point_of_interest</type>
+    <type>establishment</type>  <formatted_address>9/, vulica Hamarnika 4, Minsk, Belarus</formatted_address>
+    <geometry>
+      <location>
+        <lat>53.9556230</lat>    <lng>27.6113780</lng>
+      </location>
+    </geometry>
+    <icon>https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png</icon>
+    <reference>CnRpAAAAgntz-RcDQBXRj14TkcuO6SFIgspo9taUWehlphQo7JRXgOAGStdjZsf7IUTFU_mnXSAuXQtc8UsUolvrwSm7DJ5D44DjZn1Su6HLC4ykIt03Jkl2ZcOLCcNVvqJCUPbP0N0CJl6W347ze_WcEY2echIQMuw8qGRAss-CH4ynQrlCqhoUoQQM6wp4IrbTl6RgyWkcPXTLfdo</reference>
+    <id>29de293ed77af0a38ee81872d9cde7c2de0f10c8</id>
+    <opening_hours>
+      <open_now>true</open_now>
+    </opening_hours>
+    <place_id>ChIJ1_j2CUnP20YR3swYBmjP_2k</place_id>
+  </result>
+  <result>
+    <name>Belgazprom Bank</name>  <type>bank</type>  <type>finance</type>  <type>point_of_interest</type>
+    <type>establishment</type>  <formatted_address>praspyekt Pyatra Masherava 78, Minsk, Belarus</formatted_address>
+    <geometry>
+      <location>
+        <lat>53.9126090</lat>    <lng>27.5320330</lng>
+      </location>
+    </geometry>
+    <icon>https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png</icon>
+    <reference>CnRiAAAAxBMYLWpGNr2FeZWpxi3sU4glJ0ZlYi6yQrXmKCgwLHyDRwVJL-IYLpCl37br9BqcG4mr1QjaNdNMT4t0FX8BL2IW5TJIaeJy_y9uEfirA9l09OGSZMhguteaJ1jsA219pQOH3hA1oHcW3rSFdobQ4RIQK0zY5_L7czYYSdcmko-PDBoUKn4d_eSFLNL8SHDyVyNVhiCrfNg</reference>
+    <id>006e6c14aef63703fac5f6720d8599a095e8ca41</id>
+    <opening_hours>
+      <open_now>true</open_now>
+    </opening_hours>
+    <place_id>ChIJtbHLzYrP20YRIQwwXKuRZ2M</place_id>
+  </result>
+  <result>
+    <name>VTB Bank</name>  <type>bank</type>  <type>finance</type>  <type>point_of_interest</type>
+    <type>establishment</type>  <formatted_address>51, Minsk 220004, Belarus</formatted_address>
+    <geometry>
+      <location>
+        <lat>53.9046490</lat>    <lng>27.5324990</lng>
+      </location>
+    </geometry>
+    <icon>https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png</icon>
+    <reference>CmRbAAAAzTn6pd1q_OzUhNST49dENwQ4eZwA9FxCY7FruTO9XwviGUF-3IVYvKBhCMItRDFryhIIfPY4XovFkup1qFRE3gb8113cz9zff3Nw52OzTrRoim_8bMad9ZoMhF-UbmEIEhDO4_24JrdEFg4DloooPPYUGhSBPBPV7vEhLIimW4IsLHA8yVhgkw</reference>
+    <id>cb2cf49e78d6910467ee183d3b31dec6e6f4d111</id>  <place_id>ChIJ2UUmPvHP20YRBuL_INf2kAw</place_id>
+  </result>
+  <result>
+    <name>Idea Bank</name>  <type>bank</type>  <type>finance</type>  <type>point_of_interest</type>
+    <type>establishment</type>  <formatted_address>улица З. Бядули 11, Минск 220034, Belarus</formatted_address>
+    <geometry>
+      <location>
+        <lat>53.8981180</lat>    <lng>27.5575750</lng>
+      </location>
+    </geometry>
+    <icon>https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png</icon>
+    <reference>CmRcAAAAXFExgtWC4q6BH6E_4uJ55JiuvxHJxUCBJzvPvFpD7g6xOKAEaW5HkIFM8nOL4iTWv0FGoaSAr-nFms3LNevacLEBaIVg20wMqks5yJ16rH2t6wPjB1GhXOqnentetFH9EhB4d4-i7kYcCJ-r27uYvoopGhTETIfAoWZRIornN1R-NFn_zfTaHQ</reference>
+    <id>9b234ccf548e42d3ee6c00362939d9c8aa6fbd87</id>
+    <opening_hours>
+      <open_now>true</open_now>
+    </opening_hours>
+    <photo>
+      <photo_reference>CmRdAAAAtt1BRHxRlogIBn1vRFZ_neOTOXMY7pQXJew4VQ5za2816zPlcRfrku2Ln6U2hVaApOM9xvbYDd8TYuzGsxe_XRmqTE-Ks84oY25dsR7qmwwVRM0ye33ZiD_YMCpYHZ3gEhASANAmJ1NUHgshXgvKVagvGhRtRUsINztPM5hODtXdMz4QvVNCxg</photo_reference>
+      <width>1238</width>   <height>1239</height>
+      <html_attribution>&lt;a href=&quot;https://maps.google.com/maps/contrib/106629554183439635892&quot;&gt;Идея Банк&lt;/a&gt;</html_attribution>
+    </photo>
+    <place_id>ChIJAQBQFMLP20YR_1Vqvspc_zY</place_id>
+  </result>
+  <result>
+    <name>Москва-Минск</name>  <type>bank</type>  <type>finance</type>  <type>point_of_interest</type>
+    <type>establishment</type>  <formatted_address>vulica Labanka 22, Minsk, Belarus</formatted_address>
+    <geometry>
+      <location>
+        <lat>53.9017340</lat>    <lng>27.4344590</lng>
+      </location>
+    </geometry>
+    <icon>https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png</icon>
+    <reference>CnRqAAAAjE_0AKHcIqODHVoTI0u0UGooqYvc6G6W6Dh672GMhX1Ktb7ez77UTSruqcw8CNMlFy5SClMiEHpwMKe6tYrCPvmoNm2Y0O6b9oD0u6hyje2z9qE0153QGq-Tr5qheLZ5JnPwM-wo67G7kV9j3ZX-qBIQDh5vnhYI6uVtuJ_iDTZOMxoUPzkis5AULSKiXLoBRoVBiPqarsE</reference>
+    <id>a1dc2647a114c2047131f1e73cc2faa11fa07009</id>  <place_id>ChIJB9iEAijb20YRlXlSNUDNrRE</place_id>
+  </result>
+  <result>
+    <name>Belvneshyekonombank OAO</name>  <type>atm</type>  <type>finance</type>  <type>point_of_interest</type>
+    <type>establishment</type>  <formatted_address>Maskowski Rayon, Minsk, Belarus</formatted_address>
+    <geometry>
+      <location>
+        <lat>53.8979870</lat>    <lng>27.5427650</lng>
+      </location>
+    </geometry>
+    <icon>https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png</icon>
+    <reference>CnRqAAAAXjWOucatJ3DXiKANOAbepiv5mpdR7u74yAXl9UCQfINRMhfx1eNaue2Z4O595crrkrjWM-WFeiO1yTiE4-aTUO88SN2p-t6rH1bYwI5QJCsZRkbjk5cTdtl5CXgLlSvnvt1aawiM59DOrRRWclMZxBIQphJNsgx8du-4GzVi1cEsfhoUuteUVKbOkhYwVz-TkSJ9Rz85rI0</reference>
+    <id>10b51e0ba0c87439d8214e7d9e631e372e3c7b76</id>  <place_id>ChIJx9ebVe_P20YRjxeTHaFONjo</place_id>
+  </result>
+  <result>
+    <name>Белагропромбанк</name>  <type>bank</type>  <type>finance</type>  <type>point_of_interest</type>
+    <type>establishment</type>  <formatted_address>vulica Labanka 79, Minsk, Belarus</formatted_address>
+    <geometry>
+      <location>
+        <lat>53.8889220</lat>    <lng>27.4287820</lng>
+      </location>
+    </geometry>
+    <icon>https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png</icon>
+    <reference>CoQBcgAAAC5Nu8xwGgxcZwCmFbrBadNf8goaA4zNjhYhG8IkTbAygJiRtAAOuv1yfDh6KBDBgW8opmGnQCZLU59g5KdiynreDKaFqEsbOzty6-mcP-FLBNraXDj6Us41qCvzrohgDUPirmeuUgS4pxCxUrvlfoudZzfo1iuqBQ8YMCEj0X3AEhCR7i3t9C66wlr9DehrayWDGhRV2Y2D9bTzMp1W8CW5QWgcl-pTVA</reference>
+    <id>773f829e1b911dd5e574dd806f7471ab15003970</id>  <place_id>ChIJGdVmwuDa20YR1a0xU5iB_JQ</place_id>
+  </result>
+  <result>
+    <name>Москва-Минск ЦБУ 16</name>  <type>bank</type>  <type>finance</type>  <type>point_of_interest</type>
+    <type>establishment</type>  <formatted_address>Praspyekt Nyezalyezhnastsi 185, Minsk, Belarus</formatted_address>
+    <geometry>
+      <location>
+        <lat>53.9473480</lat>    <lng>27.6920880</lng>
+      </location>
+    </geometry>
+    <rating>4.6</rating>  <icon>https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png</icon>
+    <reference>CoQBdAAAAD24Hyyv-WBxax99w8yBtFDd1jjp6Xbr8jnKsSGqKE8buFkD-1dFSpFRErO7GQDzX3PiV5YhrfphvIVJ3Zl5Wd9I5k_4UrGZkx2g_KhBK586O3fr8vuyVLwOHAZmf9IIwGMxG2UOrPVU0tIKGeSh9bpOqqYVbvNokKPKHYgZLr08EhDjO9GqOdZBb9ghbGbPqkl6GhQZoTX7PSBToxvFHG8A1btMM0ghqQ</reference>
+    <id>b383efbd17384a9699f915a916d3c02c69ac5206</id>  <place_id>ChIJVVVFakrJ20YRwuMbGkXT6DI</place_id>
+  </result>
+  <result>
+    <name>Москва-Минск</name>  <type>bank</type>  <type>finance</type>  <type>point_of_interest</type>
+    <type>establishment</type>
+    <formatted_address>пом. 1, Kamunistychnaya Vulitsa 49, Minsk 220002, Belarus</formatted_address>
+    <geometry>
+      <location>
+        <lat>53.9141740</lat>    <lng>27.5529300</lng>
+      </location>
+    </geometry>
+    <icon>https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png</icon>
+    <reference>CnRqAAAAkH8JvRIbzFYkWvMVaeqAwtENM9ndSOFo4ih9m1IHDLfPJu34Py3sagsV9cJvlVKUJnMoK9TbSUhw1S3azBzPd4Zrfy79c_BCFiUBXy6NnVbLhwKQJ4JPsmS8lf61X4zGvXdX0vnQnKi8EYbskRLXuhIQr461u3Ozmalg9z3Pfj_CaRoUvGP1NJXvhqrdgchtoFic_8XCQ1A</reference>
+    <id>d1cfaa92a5f8a7b9005715a196a6e70c6bb324f1</id>
+    <opening_hours>
+      <open_now>true</open_now>
+    </opening_hours>
+    <photo>
+      <photo_reference>CmRdAAAAuh8Qi8CHXh7Ih1u0Y5dTxXYWLX_ybT7nj7LUx9D_VEFey5ZiYtZuZn9l_SWplg-odeYfGf-9FQUl-Vc0S2Ba7WDxFIy9iZ99jgY66NtuaeSpw_nXpJhBDwe_vbpXpV75EhDOphRTLQDsNHqitVKpcxFbGhRZ4epIATh_AZmgLq30pXARI1BHyA</photo_reference>
+      <width>2457</width>   <height>1339</height>
+      <html_attribution>&lt;a href=&quot;https://maps.google.com/maps/contrib/109603503248195753215&quot;&gt;Oleg Olegov&lt;/a&gt;</html_attribution>
+    </photo>
+    <place_id>ChIJYQfT7ZHP20YR2EptB5eUcmI</place_id>
+  </result>
+  <result>
+    <name>Москва-Минск</name>  <type>bank</type>  <type>finance</type>  <type>point_of_interest</type>
+    <type>establishment</type>  <formatted_address>Partyzanski praspiekt 46, Minsk, Belarus</formatted_address>
+    <geometry>
+      <location>
+        <lat>53.8753920</lat>    <lng>27.6237390</lng>
+      </location>
+    </geometry>
+    <icon>https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png</icon>
+    <reference>CnRqAAAAA94Y8D4zfPgKazo_jOH6kVyLVw2VxJ0yLQVDnGzmUqobWy0jbQEoNoVko2w-9z05nZUlMUa_UZHnndebtl07beNug-7qpEYFtqLNG-QUu5glliBhNLWQfT6CjuPv3vwlC6DnlnxOX9jWIlGMFb7iFxIQKqQRml5zQOZa45Y-TlNjzhoUoN_ET3pgNODg6wUzKwzKwQgo4B4</reference>
+    <id>6fa8c9689483462bc3c9853e79919d0b08f82efd</id>  <place_id>ChIJ0RI6RhrO20YRPKCr1wTwyEM</place_id>
+  </result>
+  <result>
+    <name>Беларусбанк</name>  <type>bank</type>  <type>finance</type>  <type>point_of_interest</type>
+    <type>establishment</type>  <formatted_address>Vulitsa Surhanava 66, Minsk, Belarus</formatted_address>
+    <geometry>
+      <location>
+        <lat>53.9302780</lat>    <lng>27.5819300</lng>
+      </location>
+    </geometry>
+    <icon>https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png</icon>
+    <reference>CnRpAAAA3FHmdThWh87fU4kDlzq3yel7iRNARUA-9XybR88UptUZ2p4iLLVCydy3NZhw-Os3ewC9kJHZRxLjdPCGZVcM4mgkq7jaWhYb-Ammg04qaKBRTxHGWHsHfmQ8cQSCvXRa5NQ8z4vtJU3hx7beihTegBIQDjqkEJYG-uSvGq_f6R_xaRoUDYmaRAM2-b5nW9BkxgUottHZRF8</reference>
+    <id>727342094bd2f2cfb42935ca108c50eebd65bfc8</id>
+    <photo>
+      <photo_reference>CmRdAAAAM9Ycg2LUSjXMVH1nIQ0lv_9qRVimIRKP_1ntne7GlEVF5Es5xI72xpVkYARFgUC9HKSkJ1FSXCjyAIS3Cb1-nnnMuyUrW0b3acRaddXeWkyKvELj9_Sy4oTuoorbMiDDEhDpadb5t_A0bmzMcXeiLle5GhSuO4Yjuz9qQIKQ_EJYABfXYQW5-g</photo_reference>
+      <width>1296</width>   <height>972</height>
+      <html_attribution>&lt;a href=&quot;https://maps.google.com/maps/contrib/118251203952793011708&quot;&gt;Dilya Denikayeva&lt;/a&gt;</html_attribution>
+    </photo>
+    <place_id>ChIJWf9qkXPP20YR8FdF9-GXhHk</place_id>
+  </result>
+  <result>
+    <name>Белорусский Народный Банк</name>  <type>bank</type>  <type>atm</type>  <type>finance</type>
+    <type>point_of_interest</type>  <type>establishment</type>
+    <formatted_address>Praspyekt Nyezalyezhnastsi 87А, Minsk, Belarus</formatted_address>
+    <geometry>
+      <location>
+        <lat>53.9238050</lat>    <lng>27.6055360</lng>
+      </location>
+    </geometry>
+    <icon>https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png</icon>
+    <reference>CpQBhQAAAPhK2yzAbqbauOa7A_fDc3Rey_hqDYt2I1uq--6Px6rjn7WMv1j5fiLaPNcovq0tB9Ojl6DFY14HsZTeSB_jcwGv00ZqWgLWsV8HtFqBLXIPG08pKq3rMaQYDM9TcZ9RLeLgZDcaliBtPEdb0lFFbKgCfv9DmQtZl8BGK06Ra5BfkRSZckBh03vQev2o3dSznxIQVJ8xIVsoLk_5LdK1IzmmgBoUCA1yXztzYjEBWbLP2VQLt2vQLtc</reference>
+    <id>2da917f3a2f4bad7e7ca5ffcffb059da826b8eef</id>
+    <photo>
+      <photo_reference>CmRdAAAAYYQnX-8iGs8kQxe9ljna3gVQ0WMfnPmUc79hO6nHoQXFYUbLNbvvzQGj1RPoqQIPbzJYMDDg1gFOMFU4xKSFztQo6E8Jwkp7OXLQaZdcccyqxgIYwEqSCLwJvjn9K1wnEhDMZD_E-fU9pjQIMvGJ0-3IGhRF0PsksJrw7wtn1FRL7WUDVKjoqA</photo_reference>
+      <width>1200</width>   <height>800</height>
+      <html_attribution>&lt;a href=&quot;https://maps.google.com/maps/contrib/114389862767581621317&quot;&gt;Белорусский Народный Банк&lt;/a&gt;</html_attribution>
+    </photo>
+    <place_id>ChIJOwVC1wXP20YRCgSKScXEZcU</place_id>
+  </result>
+  <result>
+    <name>Альфа-Банк</name>  <type>bank</type>  <type>finance</type>  <type>point_of_interest</type>
+    <type>establishment</type>  <formatted_address>Vulitsa Zakharava 50Д, Minsk, Belarus</formatted_address>
+    <geometry>
+      <location>
+        <lat>53.9020550</lat>    <lng>27.5827090</lng>
+      </location>
+    </geometry>
+    <icon>https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png</icon>
+    <reference>CnRnAAAAs_5oSrcGv342Da680iHQ37mK0rqMzdwBKGlcylRVUoSKUI2dKpwj5UlgM89rbdGjvrb_fpjyT5b_MZ7dll0BxrhsZntKbN0AJih3XDqKuLkaO8fpD-EqW42J8prE7CRTXyKvfBS8-ZPUwxinqQ_k8xIQr9fo9x6tFv0VsJna3sa-EBoUhjzZdt6t9Px7VVh4GSDeTY9pFBA</reference>
+    <id>bf145cf098b0756f03525a634e3dbdc994180f9d</id>
+    <opening_hours>
+      <open_now>true</open_now>
+    </opening_hours>
+    <place_id>ChIJVVUlhubP20YRahns70q0uoM</place_id>
+  </result>
+  <result>
+    <name>Alfa-Bank</name>  <type>bank</type>  <type>finance</type>  <type>point_of_interest</type>
+    <type>establishment</type>  <formatted_address>Vulitsa Prytytskaha 39, Minsk, Belarus</formatted_address>
+    <geometry>
+      <location>
+        <lat>53.9076180</lat>    <lng>27.4761310</lng>
+      </location>
+    </geometry>
+    <icon>https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png</icon>
+    <reference>CmRcAAAAJVHN0rVP1fHfsfLe1moI--C9m0MtPUeIiJLivLQiCsi1SA8LMUNH2Goz-nHxEAOqRVSZ_KF0qRoAqkYbBQh4myyPznYujUz-Zwchr-5a5O-THTHr2BC4Y-8uJAnIQTPfEhBLayKVswOTKUIsykXGEVxVGhTKVNIYnlKKlURfIXenyrVu-4tugA</reference>
+    <id>62f8fe118a2210b21dd30d14529d9d8f56be5b84</id>  <place_id>ChIJqZoIMTTF20YR11SawUIJyEg</place_id>
+  </result>
+  <result>
+    <name>МТБанк</name>  <type>atm</type>  <type>finance</type>  <type>point_of_interest</type>
+    <type>establishment</type>  <formatted_address>Partyzanski praspiekt 6Д, Minsk 220033, Belarus</formatted_address>
+    <geometry>
+      <location>
+        <lat>53.8845500</lat>    <lng>27.5833980</lng>
+      </location>
+    </geometry>
+    <rating>3.6</rating>  <icon>https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png</icon>
+    <reference>CmRgAAAAUBbHQAMhbRxfu2oEmwJ2iCj9ifUjIuW2a7n0uBZX6HSJ8m-fyfZE-0au9TGv-u0HXEvqcDfIZo18Ta-PrD7PIiV6gJvk-sKxPrzdf4Zd4gZDFHB4Y37ycDDqOrFIEa54EhCnbmiiXzdfCVivZItJ94jcGhQeWDlgbx9ojPHwbpl6QxT7rY4BzQ</reference>
+    <id>76dc635e7f9a9a490e8e49b51b861680b4611719</id>  <place_id>ChIJgUet_CzO20YRK_K-8E1_j7s</place_id>
+  </result>
+  <result>
+    <name>Идея Банк ЦБУ 42</name>  <type>bank</type>  <type>finance</type>  <type>point_of_interest</type>
+    <type>establishment</type>
+    <formatted_address>Praspyekt Nyezalyezhnastsi 168, Minsk 220141, Belarus</formatted_address>
+    <geometry>
+      <location>
+        <lat>53.9445500</lat>    <lng>27.6881490</lng>
+      </location>
+    </geometry>
+    <icon>https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png</icon>
+    <reference>CnRuAAAAlTNupqeG5-6WxZa98AOKwtRT2RPcqQj-VF6T_Mu1ji_QzT1GIrsEAxEAcUkucLvksKVCsXfE5kQ9nvzumgtGZMcbXK-3Y_Kzgdk5WGzJmcjxauPJ14Vgg8pjT6XElcB8HMOJBt-Kprokowo2o5WYuxIQbE6eHmq0LYdUvR4K8gSqEBoUtO_T8JpnNB15jc2wKRA96oA-NWM</reference>
+    <id>144de8a04aa436781674a8ebc6a151e54ca2702c</id>
+    <opening_hours>
+      <open_now>true</open_now>
+    </opening_hours>
+    <place_id>ChIJCeLas0rJ20YRvfZpzpfUNSM</place_id>
+  </result>
+  <result>
+    <name>Приорбанк ЦБУ 119</name>  <type>bank</type>  <type>finance</type>  <type>point_of_interest</type>
+    <type>establishment</type>  <formatted_address>Praspyekt Dzyarzhynskaha 104, Minsk, Belarus</formatted_address>
+    <geometry>
+      <location>
+        <lat>53.8612880</lat>    <lng>27.4800950</lng>
+      </location>
+    </geometry>
+    <icon>https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png</icon>
+    <reference>CnRwAAAAmQ_FvK5QwPUgGkGE0yDiPd1IqDTimNJMyuOsOEznHoL23AmhS8Tu_xJ_brQi_SsaUTBtpOBUaz0whdxC-XpSqO26SbUXUWXkaPZ7SoUjKQIDIaYq3rZ4Q_9xutWA1WkqrT_dzRIE6Lrb9jSuhRvLNxIQSbCAM2faWwJn6wRKrC6xeBoUKuZMaJQGnS-OQXba6PdszpCszUQ</reference>
+    <id>194a44ff362a8e5bf6f2041ebad5fd8651704294</id>
+    <opening_hours>
+      <open_now>true</open_now>
+    </opening_hours>
+    <place_id>ChIJI1HlR3nQ20YRhQFQ8-06SQk</place_id>
+  </result>
+  <result>
+    <name>RRB-Bank ZAO</name>  <type>establishment</type>
+    <formatted_address>Краснозвездная 18, Минск, 220034, Belarus</formatted_address>
+    <geometry>
+      <location>
+        <lat>53.9078110</lat>    <lng>27.5905320</lng>
+      </location>
+    </geometry>
+    <icon>https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png</icon>
+    <reference>CmRfAAAAlo1Z2iEbgcxLqoa1vJFiPeKlOinV-uaTClIMIQl9c3HklqTaWzBC4SFZttxreMom4aehpuMQiuetIgwzLoVog_dYW5yGjrt5zeQpS8mXZL_2xwQdMlEeiY8OoVSvXSFIEhBXTz9swiyMEqTCFyYvRA_5GhRhibkfbtsbva4TcOott65Dq4yPrw</reference>
+    <id>02361a1fe8b733f9fe095bbc2d502746cb168f14</id>  <place_id>ChIJ1YjHtrHP20YRDmb2e8qj4Bk</place_id>
+  </result>
+  <result>
+    <name>Belgazprombank OAO</name>  <type>bank</type>  <type>finance</type>  <type>point_of_interest</type>
+    <type>establishment</type>  <formatted_address>Vulitsa Prytytskaha 60/2, Minsk, Belarus</formatted_address>
+    <geometry>
+      <location>
+        <lat>53.9089090</lat>    <lng>27.4685230</lng>
+      </location>
+    </geometry>
+    <icon>https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png</icon>
+    <reference>CnRlAAAAEdT4-2nYunuTuM09TlzLHuuw3Pg0XxHqeNj9hz0slGNgYb4gGTUbaMTmpmfFU1J0h9Rv1YrAgAPUlxbBBYY_i8PJggxw8doAG0oZCwNxoJJWZo1N63OmcawCBD11ygBYLYtyr4QjS7utNnsIgL34fxIQYZOFcr2zVhaJHEyBMq8TcBoU7WFN3K-rkCoObCANtCnd413pUvs</reference>
+    <id>6917ed191644d5f8d2297b076739d2899dd38ad6</id>
+    <opening_hours>
+      <open_now>true</open_now>
+    </opening_hours>
+    <place_id>ChIJHf6ONFrF20YRtWHuEA1kCUk</place_id>
+  </result>
+  <next_page_token>CuQB2wAAAKkseDxiF9sX6CmVl30OKIvI02_daOyg9DG9smyd-Ucxa7lh6fia_m_eqaqcqUMTJgLyln_YMKyZTw7CWe8qXImibxE5okSA3Bb-S8TTRvjGNdhCvXIgqCcYEkY8U3F3fK07awvcTYdvQ3c0YBz5GpQ-wxLnwv4dAHvnqnoSaGO0zcfUmM3O5Lt_Lh11Gh0HQfHsDs_5ileH5qHMZ--_Qi3dJD_qKDOziljMFU8URup_3wG5CMTz3AsT2pICgvWNY6-6GvyQE7Z3irJDfheOaO4fGh6VGbGCE1OeUJZtikoXEhDRCK8rPsr1WRNJ-KHVz_9iGhQ-Kbdhle2giN2CG6hpLn260-1lYg</next_page_token>
+</PlaceSearchResponse>

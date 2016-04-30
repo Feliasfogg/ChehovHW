@@ -1,70 +1,130 @@
-﻿<Window x:Class="MediaPlayer.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MediaPlayer"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="458" Width="720" Loaded="Window_Loaded">
+﻿<Window
+   x:Class="MediaPlayer.MainWindow"
+   Title="MainWindow"
+   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+   xmlns:local="clr-namespace:MediaPlayer"
+   Height="558"
+   Width="720"
+   Loaded="Window_Loaded"
+   mc:Ignorable="d">
 
-    <DockPanel LastChildFill="True">
-        <Menu DockPanel.Dock="Top">
-            <MenuItem Header="Open file" Click="MenuOpenFile_OnClick" />
-            <MenuItem Header="Save PlayList" Click="MenuSavePlaylist_OnClick" />
-            <MenuItem Header="FullScreen" Click="MenuFullScreen_OnClick" />
-        </Menu>
-        <StatusBar DockPanel.Dock="Bottom">
-            <Label>Duration</Label>
-            <Label Name="DurationNowLabel">00:00:00</Label>
-            <Label Name="DurationTotalLabel">00:00:00</Label>
-            <Label HorizontalContentAlignment="Right">Volume</Label>
-            <Label Name="VolumeLabel">0%</Label>
-        </StatusBar>
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="34*" />
-                <ColumnDefinition Width="13*" />
-            </Grid.ColumnDefinitions>
+   <DockPanel LastChildFill="True">
+      <Menu DockPanel.Dock="Top">
+         <MenuItem
+            Click="MenuOpenFile_OnClick"
+            Header="Open file" />
+         <MenuItem
+            Click="MenuSavePlaylist_OnClick"
+            Header="Save PlayList" />
+      </Menu>
+      <StatusBar DockPanel.Dock="Bottom">
+         <Label>Duration</Label>
+         <Label Name="DurationNowLabel">00:00:00</Label>
+         <Label Name="DurationTotalLabel">00:00:00</Label>
+         <Label HorizontalContentAlignment="Right">Volume</Label>
+         <Label Name="VolumeLabel">0%</Label>
+      </StatusBar>
+      <Grid>
+         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="34*" />
+            <ColumnDefinition Width="13*" />
+         </Grid.ColumnDefinitions>
+         <Grid.RowDefinitions>
+            <RowDefinition Height="12*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+         </Grid.RowDefinitions>
+         <ListBox
+            Name="ListBoxPlayList"
+            Grid.Column="1"
+            Grid.Row="0"
+            Grid.RowSpan="2"
+            MouseDoubleClick="ListBoxPlayList_OnMouseDoubleClick"
+            SelectedIndex="0">
+            <ListBox.ContextMenu>
+               <ContextMenu>
+                  <MenuItem
+                     Click="ContextMenuAdd_OnClick"
+                     Header="Add" />
+                  <MenuItem
+                     Click="ContextMenuRemove_OnClick"
+                     Header="Remove" />
+               </ContextMenu>
+            </ListBox.ContextMenu>
+         </ListBox>
+         <Slider
+            x:Name="sliderPosition"
+            Grid.Column="0"
+            Grid.Row="1"
+            VerticalAlignment="Center"
+            IsMoveToPointEnabled="True"
+            LostMouseCapture="sliderPosition_LostMouseCapture"
+            ValueChanged="SliderPosition_OnValueChanged" />
+         <Grid
+            Grid.Column="0"
+            Grid.Row="2"
+            Margin="5"
+            VerticalAlignment="Center">
             <Grid.RowDefinitions>
-                <RowDefinition Height="300*" />
-                <RowDefinition Height="20*" />
-                <RowDefinition Height="30*" />
+               <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <ListBox Name="ListBoxPlayList" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" SelectedIndex="0"
-                     MouseDoubleClick="ListBoxPlayList_OnMouseDoubleClick"
-                     SelectionChanged="ListBox_PlayList_OnSelectionChanged">
-                <ListBox.ContextMenu>
-                    <ContextMenu>
-                        <MenuItem Header="Add" Click="ContextMenuAdd_OnClick" />
-                        <MenuItem Header="Remove" Click="ContextMenuRemove_OnClick" />
-                    </ContextMenu>
-                </ListBox.ContextMenu>
-            </ListBox>
-            <Slider Grid.Row="1" Grid.Column="0" x:Name="sliderPosition" ValueChanged="SliderPosition_OnValueChanged"
-                    IsMoveToPointEnabled="True" VerticalAlignment="Center"
-                    LostMouseCapture="sliderPosition_LostMouseCapture" />
-            <Grid Grid.Row="2" Grid.Column="0" Margin="5" VerticalAlignment="Center">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="10*" />
-                    <ColumnDefinition Width="10*" />
-                    <ColumnDefinition Width="10*" />
-                    <ColumnDefinition Width="10*" />
-                </Grid.ColumnDefinitions>
-                <Button Grid.Row="0" Grid.Column="0" Name="ButtonBack" Click="ButtonBack_Click">Back</Button>
-                <Button Grid.Row="0" Grid.Column="1" Name="ButtonPlay" Click="ButtonPlay_Click">Play</Button>
-                <Button Grid.Row="0" Grid.Column="2" Name="ButtonStop" Click="ButtonStop_OnClick">Stop</Button>
-                <Button Grid.Row="0" Grid.Column="3" Name="ButtonNext" Click="ButtonNext_Click">Next</Button>
-            </Grid>
-            <Slider Grid.Row="2" Grid.Column="1" x:Name="sliderVolume" IsMoveToPointEnabled="True"
-                    VerticalAlignment="Center" ValueChanged="SliderVolume_OnValueChangedliderVolume_ValueChanged"
-                    Minimum="0" Maximum="1" />
-            <MediaElement Name="mediaElement" Grid.Row="0" Grid.Column="0" LoadedBehavior="Manual"
-                          UnloadedBehavior="Close" MediaOpened="mediaElement_MediaOpened" Volume="0.3"
-                          KeyDown="mediaElement_KeyDown" MediaEnded="mediaElement_MediaEnded" />
-        </Grid>
+            <Grid.ColumnDefinitions>
+               <ColumnDefinition Width="10*" />
+               <ColumnDefinition Width="10*" />
+               <ColumnDefinition Width="10*" />
+               <ColumnDefinition Width="10*" />
+            </Grid.ColumnDefinitions>
+            <Button
+               Name="ButtonBack"
+               Grid.Column="0"
+               Grid.Row="0"
+               Click="ButtonBack_Click">
+               Back
+            </Button>
+            <Button
+               Name="ButtonPlay"
+               Grid.Column="1"
+               Grid.Row="0"
+               Click="ButtonPlay_Click">
+               Play
+            </Button>
+            <Button
+               Name="ButtonStop"
+               Grid.Column="2"
+               Grid.Row="0"
+               Click="ButtonStop_OnClick">
+               Stop
+            </Button>
+            <Button
+               Name="ButtonNext"
+               Grid.Column="3"
+               Grid.Row="0"
+               Click="ButtonNext_Click">
+               Next
+            </Button>
+         </Grid>
+         <Slider
+            x:Name="sliderVolume"
+            Grid.Column="1"
+            Grid.Row="2"
+            VerticalAlignment="Center"
+            IsMoveToPointEnabled="True"
+            Maximum="1"
+            Minimum="0"
+            ValueChanged="SliderVolume_OnValueChangedliderVolume_ValueChanged" />
+         <MediaElement
+            Name="mediaElement"
+            Grid.Column="0"
+            Grid.Row="0"
+            LoadedBehavior="Manual"
+            MediaEnded="mediaElement_MediaEnded"
+            MediaOpened="mediaElement_MediaOpened"
+            UnloadedBehavior="Close"
+            Volume="0.3" />
+      </Grid>
 
-    </DockPanel>
+   </DockPanel>
 </Window>

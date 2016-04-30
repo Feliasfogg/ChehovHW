@@ -1,0 +1,18 @@
+﻿<!--1. Имеется класс Cars и класс CarsPark. Класс  CarsPark содержит свойство, 
+возвращающее коллекцию объетов класса Cars. 
+С ипользованием разметки XAML привязать данную коллекцию к DataGrid. -->
+<Window x:Class="CarsParkApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarsParkApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <local:CarsPark x:Key="Park"></local:CarsPark>
+    </Window.Resources>
+    <Grid>
+        <DataGrid ItemsSource="{Binding Source={StaticResource Park}, Path=GoodCars}" Height="321" VerticalAlignment="Top" HorizontalAlignment="Right" Width="519"></DataGrid>
+    </Grid>
+</Window>

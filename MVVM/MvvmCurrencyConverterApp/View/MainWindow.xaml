@@ -1,0 +1,61 @@
+﻿<!-- 4. Реализовать паттерн MVVM для функционала конвертера валют. 
+Конвертер должен  проивзодить конвертацию из USD в RUB и обратно.-->
+<Window x:Class="MvvmCurrencyConverterApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MvvmCurrencyConverterApp.ViewModel"
+        mc:Ignorable="d"
+        Title="Конвертер USD в BYR и обратно" Height="350" Width="525">
+   <Window.DataContext>
+      <local:MainWindowViewModel />
+   </Window.DataContext>
+   <Grid>
+      <Grid.RowDefinitions>
+         <RowDefinition />
+         <RowDefinition />
+         <RowDefinition Height="Auto" />
+         <RowDefinition />
+      </Grid.RowDefinitions>
+      <Label HorizontalAlignment="Center" VerticalAlignment="Center">Конвертер USD в BYR</Label>
+      <StackPanel Grid.Row="1" VerticalAlignment="Center">
+         <Label HorizontalAlignment="Center">Выберите начальную валюту:</Label>
+         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <RadioButton Padding="2 0 10 0"
+                         IsChecked="{Binding Path=ModelClient.IsUsdChecked, UpdateSourceTrigger=PropertyChanged}">
+               USD
+            </RadioButton>
+            <RadioButton Padding="2 0 0 0"
+                         IsChecked="{Binding Path=ModelClient.IsByrChecked, UpdateSourceTrigger=PropertyChanged}">
+               BYR
+            </RadioButton>
+         </StackPanel>
+      </StackPanel>
+      <StackPanel VerticalAlignment="Center" Grid.Row="2">
+         <Grid>
+            <Grid.ColumnDefinitions>
+               <ColumnDefinition />
+               <ColumnDefinition Width="Auto" />
+               <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+               <RowDefinition />
+               <RowDefinition />
+               <RowDefinition />
+               <RowDefinition />
+               <RowDefinition />
+            </Grid.RowDefinitions>
+            <Label Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center">Введите сумму для конверсии</Label>
+            <TextBox Grid.Column="1" Grid.Row="1" Name="EntrySumBox" Margin="10"
+                     Text="{Binding Path=ModelClient.EntrySum, UpdateSourceTrigger=PropertyChanged}" />
+            <Label Grid.Column="1" Grid.Row="2">Введите курс обмена:</Label>
+            <TextBox Grid.Column="1" Grid.Row="3" Name="ExchangeRateBox" Margin="10"
+                     Text="{Binding Path=ModelClient.ExchangeRate, UpdateSourceTrigger=PropertyChanged}" />
+            <Button Grid.Row="4" Grid.Column="1" Content="Рассчитать" Name="ComputeBtn" Command="{Binding Compute}" />
+         </Grid>
+      </StackPanel>
+      <Label Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"
+             Content="{Binding Path=Result, UpdateSourceTrigger=PropertyChanged}" />
+   </Grid>
+</Window>

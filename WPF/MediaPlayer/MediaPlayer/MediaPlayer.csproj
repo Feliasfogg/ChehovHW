@@ -97,9 +97,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MediaFileLib\MediaFileLib.csproj">
+    <ProjectReference Include="..\MediaFileLib\MediaPlayerLib.csproj">
       <Project>{9ca79c86-14ac-4b06-9cd6-af59c1156f32}</Project>
-      <Name>MediaFileLib</Name>
+      <Name>MediaPlayerLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

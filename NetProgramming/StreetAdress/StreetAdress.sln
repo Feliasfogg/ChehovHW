@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreetAdressClient", "StreetAdress\StreetAdressClient.csproj", "{05460801-9A8F-459D-8227-5CD6A0531DA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreetAdressServer", "StreetAdressServer\StreetAdressServer.csproj", "{19B7057F-239A-493A-B9E9-83E7C3D20E09}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05460801-9A8F-459D-8227-5CD6A0531DA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05460801-9A8F-459D-8227-5CD6A0531DA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05460801-9A8F-459D-8227-5CD6A0531DA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05460801-9A8F-459D-8227-5CD6A0531DA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19B7057F-239A-493A-B9E9-83E7C3D20E09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19B7057F-239A-493A-B9E9-83E7C3D20E09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19B7057F-239A-493A-B9E9-83E7C3D20E09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19B7057F-239A-493A-B9E9-83E7C3D20E09}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -24,9 +24,9 @@ namespace MediaPlayer {
    /// Interaction logic for MainWindow.xaml
    /// </summary>
    public partial class MainWindow : Window {
+      //player state
       private bool _bIsPlaying = false;
-      private bool _bIgnoreChange = false;
-      private bool _bFullScreen = false;
+      //timer for move slieder and change time indications
       private DispatcherTimer _Timer;
       private PlayList _PlayList;
 
@@ -41,6 +41,11 @@ namespace MediaPlayer {
          sliderVolume.Value = mediaElement.Volume;
       }
 
+      /// <summary>
+      /// Open file for playing
+      /// </summary>
+      /// <param name="sender"></param>
+      /// <param name="e"></param>
       private void MenuOpenFile_OnClick(object sender, RoutedEventArgs e) {
          try {
             var objDialog = new OpenFileDialog() {
@@ -90,21 +95,6 @@ namespace MediaPlayer {
          }
       }
 
-      private void MenuFullScreen_OnClick(object sender, RoutedEventArgs e) {
-         if(!_bFullScreen) {
-            //mediaElement.Width = SystemParameters.FullPrimaryScreenWidth;
-            //mediaElement.Height = SystemParameters.FullPrimaryScreenHeight;
-
-            WindowStyle = WindowStyle.None;
-            WindowState = WindowState.Maximized;
-         }
-         else {
-            WindowStyle = WindowStyle.SingleBorderWindow;
-            WindowState = WindowState.Normal;
-         }
-         _bFullScreen = !_bFullScreen;
-      }
-
       private void ButtonBack_Click(object sender, RoutedEventArgs e) {
          if(ListBoxPlayList.SelectedIndex != 0) {
             ListBoxPlayList.SelectedIndex -= 1;
@@ -138,6 +128,11 @@ namespace MediaPlayer {
          ListBoxPlayList_OnMouseDoubleClick(sender, null);
       }
 
+      /// <summary>
+      /// Double click on play-list item
+      /// </summary>
+      /// <param name="sender"></param>
+      /// <param name="e"></param>
       private void ListBoxPlayList_OnMouseDoubleClick(object sender, MouseButtonEventArgs e) {
          try {
             mediaElement.Stop();
@@ -160,14 +155,9 @@ namespace MediaPlayer {
          }
       }
 
-      private void ListBox_PlayList_OnSelectionChanged(object sender, SelectionChangedEventArgs e) {
-      }
-
       private void dispatcherTimer_Tick(object sender, EventArgs e) {
-         _bIgnoreChange = true;
          sliderPosition.Value = mediaElement.Position.TotalSeconds;
          DurationNowLabel.Content = mediaElement.Position.ToString(@"hh\:mm\:ss");
-         _bIgnoreChange = false;
       }
 
       private void sliderPosition_LostMouseCapture(object sender, MouseEventArgs e) {
@@ -175,15 +165,9 @@ namespace MediaPlayer {
       }
 
       private void SliderPosition_OnValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e) {
-         //каждый раз когда срабатывает таймер мы сдвигаем слайдер соотвественно видео, а каждый раз когда отрабатывает сдвиг слайдера видео 
-         //проматывается соотвественно сдвигу слайдера. Получается замкнутый круг где одно двигает другое чтобы двигать первое, таким костылем я избегаю подобного 
-         //эффекта
-         //if(_bIgnoreChange) {
-         //   return;
-         //}
-         //if(!sliderPosition.IsMouseCaptureWithin) {
-         //   mediaElement.Position = TimeSpan.FromSeconds(sliderPosition.Value);
-         //}
+         if(!sliderPosition.IsMouseCaptureWithin) {
+            mediaElement.Position = TimeSpan.FromSeconds(sliderPosition.Value);
+         }
       }
 
       private void SliderVolume_OnValueChangedliderVolume_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e) {
@@ -228,11 +212,6 @@ namespace MediaPlayer {
          UpdatePlayListView();
       }
 
-      private void mediaElement_KeyDown(object sender, KeyEventArgs e) {
-         if(e.Key == Key.Escape) {
-            MenuFullScreen_OnClick(sender, e);
-         }
-      }
 
       private void mediaElement_MediaEnded(object sender, RoutedEventArgs e) {
          mediaElement.Stop();
