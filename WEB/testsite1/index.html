@@ -1,0 +1,24 @@
+<html>
+<HEAD>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+        function show(str) {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function () {
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                    document.getElementById("korovan").innerHTML = xmlHttp.responseText;
+                }
+            };
+            xmlHttp.open("GET", "script.php?q=" + str, true);
+            xmlHttp.send();
+        }
+    </script>
+</HEAD>
+<body>
+<p>Дай мне число, я посчитаю его квадрат</p>
+<form>
+    <input type="text" onkeyup="show(this.value)">
+</form>
+<p>Ответ: <span id="korovan"></span></p>
+</body>
+</html>

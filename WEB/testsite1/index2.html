@@ -1,0 +1,42 @@
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"
+            integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#foo").submit(function (event) {
+                $form = $(this);
+                $data = $form.serialize();
+                $input = $form.find("input, button");
+
+                request = $.ajax({
+                    url: "script.php",
+                    type: "GET",
+                    data: $data,
+                    timeout: 2000
+                });
+                request.fail(function () {
+                   alert("Ooooops");
+                });
+                request.always(function () {
+                    $input.prop("disabled", false);
+                });
+                request.done(function (response, textStatus, jq) {
+                    console.log(response);
+                    $("#korovan").html(response);
+                });
+                event.preventDefault();
+            });
+        });
+    </script>
+</head>
+<body>
+<form id="foo">
+    <input type="text" name="q" id="q">
+    <input type="submit" value="send">
+</form>
+<p>Ответ: <span id="korovan">Test</span></p>
+</body>
+</html>
